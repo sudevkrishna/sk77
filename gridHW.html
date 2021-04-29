@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .item1{grid-area: Header;background-color: darkred;}
+      .item2{grid-area: Nav;background-color: blue;}  
+      .item3{grid-area: Article;background-color:lightgreen;}
+      .item4{grid-area: Ads;background-color: cyan;}
+      .item5{grid-area: Footer;background-color: gold;}
+      .grid-container
+      {
+          grid-template-columns: auto auto auto auto auto auto;
+          grid-template-rows: 200px 400px;
+          display: grid;
+          grid-gap: 10px;
+          background-color: lightgrey;
+          padding: 10px;
+          grid-template-areas: 'Header Header Header Header Header Header'
+                               'Nav Article Article Article Article Ads'
+                               'Nav Footer Footer Footer Footer Footer';
+      }
+      .grid-container > div
+      {
+          text-align: left;
+          padding: 20px 0;
+          /*background-color:darkred;*/
+          font-size: 30px;
+      }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Nav</div>
+        <div class="item3">Article</div>
+        <div class="item4">Ads</div>
+        <div class="item5">Footer</div>
+    </div>
+</body>
+</html>
